@@ -1,3 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.explanation-container{
+    width: 500px;
+}
 .tulang-container{
     position: relative;
 
