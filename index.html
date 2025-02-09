@@ -33,7 +33,7 @@
     </style>
     <link rel="stylesheet" href="./output.css">
 </head>
-<body class="bg-dark-purple relative">
+<body class="bg-dark-purple relative" id="body">
     <div class="block mx-auto w-[1000px] mt-72 relative">
         <img class="w-[1000px]" src="./assets/bio_lab.png" alt="">
         <h1 class="font-glacial text-white text-6xl mt-10">Tekan di mana saja untuk memulai</h1>
@@ -45,6 +45,11 @@
         <img class="absolute -bottom-80 -right-96 w-64"  src="./assets/heart.png" alt="">
     </div>
 
-
+    <script>
+        const body = document.getElementById("body")
+        body.addEventListener('click', () => {
+            window.location.href = "main-menu.html"
+        })
+    </script>
 </body>
 </html>
