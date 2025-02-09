@@ -9,7 +9,10 @@ module.exports = {
         'soft-red' : '#F40058',
         'soft-orange' : '#EFA500',
         'soft-green' : '#41B853'
-      }
+      },
+      fontFamily: {
+        glacial: ['"Glacial Indifference"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
