@@ -13,25 +13,16 @@ body{
     @apply font-glacial
 }
 .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 20px;
+    @apply w-full flex flex-col items-center
 }
 
-.explanation-container{
-    width: 500px;
+.font-league-spartan{
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
-.tulang-container{
-    position: relative;
 
-    width: 500px;
-    height: 500px;
-    /* background-image: url('/assets/tb_tengkorak.svg'); */
-    background-size: contain;
-    background-color: black;
-}
 
 .layout{
     width: 500px;
@@ -44,8 +35,8 @@ body{
 /* experiment */
 .skull-svg-container{
     position: absolute;
-    width: 500px;
-    height: 500px;
+    /* width: 500px;
+    height: 500px; */
     top: 0;
 }
 
