@@ -39,35 +39,35 @@
         <div class="flex flex-row flex-wrap gap-16 justify-center mt-10">
             <div class="w-52 bg-light-blue py-5 rounded-xl">
                 <img src="./assets/tengkorak_full.png" class="w-72">
-                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer">
+                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer" id="tengkorak-btn">
                     Tengkorak
                 </div>
             </div>
             
             <div class="w-52 bg-light-blue py-5 rounded-xl">
                 <img src="./assets/badan_full.png" class="w-72">
-                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer">
+                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer" id="badan-btn">
                     Badan
                 </div>
             </div>
 
             <div class="w-52 bg-light-blue py-5 rounded-xl">
                 <img src="./assets/tulang_belakang_full.png" class="w-72">
-                <div class="py-2 px-2 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer">
+                <div class="py-2 px-2 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer" id="tulang-belakang-btn">
                     Tulang Belakang
                 </div>
             </div>
 
             <div class="w-52 bg-light-blue py-5 rounded-xl">
                 <img src="./assets/tangan_full.png" class="w-72">
-                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer">
+                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer" id="tangan-btn">
                     Tangan
                 </div>
             </div>
 
             <div class="w-52 bg-light-blue py-5 rounded-xl">
                 <img src="./assets/kaki_full.png" class="w-72">
-                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer">
+                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer" id="kaki-btn">
                     Kaki
                 </div>
             </div>
@@ -78,6 +78,27 @@
         
     </div>
 
+    <script>
+        const tengkorakBtn = document.getElementById("tengkorak-btn")
+        tengkorakBtn.addEventListener('click', () => {
+            window.location.href = "/parts/tengkorak.html"
+        })
+
+        const badanBtn = document.getElementById("badan-btn")
+        badanBtn.addEventListener('click', () => {
+            window.location.href = "/parts/badan.html"
+        })
+
+        const tanganBtn = document.getElementById("tangan-btn")
+        tanganBtn.addEventListener('click', () => {
+            window.location.href = "/parts/lengan.html"
+        })
+
+        const kakiBtn = document.getElementById("kaki-btn")
+        kakiBtn.addEventListener('click', () => {
+            window.location.href = "/parts/kaki.html"
+        })
+    </script>
 
 </body>
 </html>
