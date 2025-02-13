@@ -22,7 +22,7 @@ jobs:
         run: npm install tailwindcss@3.4.17
 
       - name: Build project
-        run: npm run build-tailwind
+        run: npx tailwindcss -i ./style.css -o ./output.css
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
