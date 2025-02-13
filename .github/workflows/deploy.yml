@@ -24,19 +24,18 @@ jobs:
       - name: Build project
         run: npx tailwindcss -i ./style.css -o ./output.css
 
-      - name: Deploy to gh-pages branch
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout --orphan gh-pages
-          git reset --hard
-          git add output.css
-          git commit -m "Deploy Tailwind output.css to gh-pages"
-          git push --force origin gh-pages
+      - name: List files (for debugging)
+        run: ls -la
 
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: .
-      #     force_orphan: true
+      - name: Create temporary directory
+        run: |
+          mkdir -p temp
+          cp -r * temp/ || true
+          cp output.css temp/ || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./temp
+          force_orphan: true
