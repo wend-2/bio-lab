@@ -35,6 +35,17 @@
         <span class="absolute bg-light-blue p-2 rounded-3xl text-5xl bottom-10 left-5 hover:opacity-80 hover:cursor-pointer" id="home-btn">
             <i class="fa-solid fa-house-chimney"></i>
         </span>
+
+        
+        <audio id="carpalsAudio" src="./../voice_notes/Tangan/carpals.m4a"></audio>
+        <audio id="clavicleAudio" src="./../voice_notes/Tangan/clavicle.m4a"></audio>
+        <audio id="humerusAudio" src="./../voice_notes/Tangan/humerus.m4a"></audio>
+        <audio id="metacarpalsAudio" src="./../voice_notes/Tangan/metacarpals.m4a"></audio>
+        <audio id="phalangesAudio" src="./../voice_notes/Tangan/phalanges.m4a"></audio>
+        <audio id="radiusAudio" src="./../voice_notes/Tangan/radius.m4a"></audio>
+        <audio id="scapulaAudio" src="./../voice_notes/Tangan/scapula.m4a"></audio>
+        <audio id="ulnaAudio" src="./../voice_notes/Tangan/ulna.m4a"></audio>
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
             
@@ -70,7 +81,15 @@
                 "ulna" : "Hasta",
                 "scapula" : "Belikat",
             }
+
             paths.forEach(path => {
+                path.addEventListener("click", function() {
+                    const skullInfo = path.getAttribute("data-name").split("-")
+                    const id = skullInfo + "Audio"
+                    let audio = document.getElementById(id);
+                    audio.play();
+                });
+
                 path.addEventListener("mouseenter", function () {
                     const pathId = path.id || "(No ID)";
                     display.textContent = `Cursor is hovering on ${pathId}`;
