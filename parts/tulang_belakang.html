@@ -76,15 +76,17 @@
                 });
 
                 path.addEventListener("mouseenter", function () {
-                    const pathId = path.id || "(No ID)";
-                    display.textContent = `Cursor is hovering on ${pathId}`;
-                    display.style.display = "block";
 
                     const skullInfo = path.getAttribute("data-name").split("-")
 
+                    const pathId = path.id || "(No ID)";
+                    // display.textContent = `Cursor is hovering on ${pathId}`;
+                    display.textContent = `Cursor is hovering on ${skullInfo}`;
+                    display.style.display = "block";
+
                     skullName = skullInfo[0].charAt(0).toUpperCase() + skullInfo[0].slice(1);
                     skullNameObj.innerHTML = skullName
-                    skullDescObj.innerHTML = kamus[skullInfo[0]];
+                    skullDescObj.innerHTML = kamus[skullInfo[0]]
 
                     // Check if the hovered element's ID starts with "costavera"
                     document.querySelectorAll(`[id^='${skullInfo}']`).forEach(el => {

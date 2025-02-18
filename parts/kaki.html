@@ -88,11 +88,13 @@
                 });
 
                 path.addEventListener("mouseenter", function () {
-                    const pathId = path.id || "(No ID)";
-                    display.textContent = `Cursor is hovering on ${pathId}`;
-                    display.style.display = "block";
 
                     const skullInfo = path.getAttribute("data-name").split("-")
+
+                    const pathId = path.id || "(No ID)";
+                    // display.textContent = `Cursor is hovering on ${pathId}`;
+                    display.textContent = `Cursor is hovering on ${skullInfo}`;
+                    display.style.display = "block";
 
                     skullName = skullInfo[0].charAt(0).toUpperCase() + skullInfo[0].slice(1);
                     skullNameObj.innerHTML = skullName
