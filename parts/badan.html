@@ -137,7 +137,6 @@
                 path.addEventListener("click", function() {
                     const skullInfo = path.getAttribute("data-name").split("-")
                     const id = skullInfo + "Audio"
-                    console.log("playing " + id)
                     let audio = document.getElementById(id);
                     audio.play();
                 });
