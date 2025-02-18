@@ -59,6 +59,16 @@
             display.style.display = "none";
             document.body.appendChild(display);
             
+            let kamus = {
+                "femur" : "Paha",
+                "fibula" : "Betis",
+                "metatarsals" : "Telapak Kaki",
+                "patella" : "Lutut",
+                "phalanges" : "Jari-Jari Kaki",
+                "tarsals" : "Pergelangan Kaki",
+                "tibia" : "Tulang Kering",
+                "metatarsal" : "Telapak kaki",
+            }
             paths.forEach(path => {
                 path.addEventListener("mouseenter", function () {
                     const pathId = path.id || "(No ID)";
@@ -69,7 +79,7 @@
 
                     skullName = skullInfo[0].charAt(0).toUpperCase() + skullInfo[0].slice(1);
                     skullNameObj.innerHTML = skullName
-                    skullDescObj.innerHTML = skullName
+                    skullDescObj.innerHTML = kamus[skullInfo[0]]
 
                     // Check if the hovered element's ID starts with "costavera"
                     document.querySelectorAll(`[id^='${skullInfo}']`).forEach(el => {

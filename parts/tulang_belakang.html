@@ -52,6 +52,13 @@
             display.style.display = "none";
             document.body.appendChild(display);
             
+            let kamus = {
+                "coccy" : "Tulang Ekor",
+                "lumbar" : "5 Ruas Tulang Punggung Bawah",
+                "serviks" : "7 Ruas Tulang Leher",
+                "thoraks" : "12 Ruas Tulang Punggung Tengah",
+                "sacrum" : "Tulang Panggul"
+            };
             paths.forEach(path => {
                 path.addEventListener("mouseenter", function () {
                     const pathId = path.id || "(No ID)";
@@ -62,7 +69,7 @@
 
                     skullName = skullInfo[0].charAt(0).toUpperCase() + skullInfo[0].slice(1);
                     skullNameObj.innerHTML = skullName
-                    skullDescObj.innerHTML = skullName
+                    skullDescObj.innerHTML = kamus[skullInfo[0]];
 
                     // Check if the hovered element's ID starts with "costavera"
                     document.querySelectorAll(`[id^='${skullInfo}']`).forEach(el => {
