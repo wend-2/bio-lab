@@ -34,6 +34,16 @@
         <span class="absolute bg-light-blue p-2 rounded-3xl text-5xl bottom-10 left-5 hover:opacity-80 hover:cursor-pointer" id="home-btn">
             <i class="fa-solid fa-house-chimney"></i>
         </span>
+
+    
+        <audio id="femurAudio" src="./../voice_notes/Kaki/femur.m4a"></audio>
+        <audio id="fibulaAudio" src="./../voice_notes/Kaki/fibula.m4a"></audio>
+        <audio id="metatarsalAudio" src="./../voice_notes/Kaki/metatarsals.m4a"></audio>
+        <audio id="patellaAudio" src="./../voice_notes/Kaki/patella.m4a"></audio>
+        <audio id="phalangesAudio" src="./../voice_notes/Kaki/phalanges.m4a"></audio>
+        <audio id="tarsalsAudio" src="./../voice_notes/Kaki/tarsals.m4a"></audio>
+        <audio id="tibiaAudio" src="./../voice_notes/Kaki/tibia.m4a"></audio>
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
             
@@ -70,6 +80,13 @@
                 "metatarsal" : "Telapak kaki",
             }
             paths.forEach(path => {
+                path.addEventListener("click", function() {
+                    const skullInfo = path.getAttribute("data-name").split("-")
+                    const id = skullInfo + "Audio"
+                    let audio = document.getElementById(id);
+                    audio.play();
+                });
+
                 path.addEventListener("mouseenter", function () {
                     const pathId = path.id || "(No ID)";
                     display.textContent = `Cursor is hovering on ${pathId}`;
