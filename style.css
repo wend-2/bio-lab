@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    @apply font-glacial
+}
+.container{
+    @apply w-full flex flex-col items-center
+}
+
+.font-league-spartan{
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.layout{
+    width: 500px;
+    height: 500px;
+    opacity: 0.3;
+    background-color: black;
+}
+
