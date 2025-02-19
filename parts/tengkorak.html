@@ -120,7 +120,7 @@
                     audio.play();
                 });
 
-                path.path.addEventListener("mouseenter", function () {
+                path.addEventListener("mouseenter", function () {
 
                     const skullInfo = path.getAttribute("data-name").split("-")
 
@@ -139,12 +139,12 @@
                         el.style.fill = "black";
                     });
                 });
-                
+
                 path.addEventListener("mousemove", function (event) {
                     display.style.top = `${event.clientY + 10}px`;
                     display.style.left = `${event.clientX + 10}px`;
                 });
-                
+
                 path.addEventListener("mouseleave", function () {
                     display.style.display = "none";
 
