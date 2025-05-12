@@ -72,6 +72,12 @@
                 </div>
             </div>
 
+            <div class="w-52 bg-light-blue py-5 rounded-xl flex items-center">
+                <div class="py-2 px-4 rounded-lg text-white text-center bg-black text-xl w-40 mx-auto mt-5 hover:bg-blue-50 hover:text-black transition-all cursor-pointer" id="kuis-btn">
+                    Kuis
+                </div>
+            </div>
+
         </div>
         <img class="absolute -bottom-20 -left-96 w-96"  src="./assets/neuron.png" alt="">
         <img class="absolute -top-20 -right-96 rotate-45"  src="./assets/dna.png" alt="">
@@ -102,6 +108,11 @@
         const kakiBtn = document.getElementById("kaki-btn")
         kakiBtn.addEventListener('click', () => {
             window.location.href = "parts/kaki.html"
+        })
+
+        const kuisBtn = document.getElementById("kuis-btn")
+        kuisBtn.addEventListener('click', () => {
+            window.location.href = "parts/kuis.html"
         })
     </script>
 
